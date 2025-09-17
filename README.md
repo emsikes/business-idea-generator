@@ -1,40 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Business Idea Generator
 
-## Getting Started
+A small web app that generates business ideas on demand.
 
-First, run the development server:
+---
+
+## 🚀 Getting Started
+
+These steps will help you get a local copy up and running.
+
+### Prerequisites
+
+- Node.js (16+ recommended)  
+- npm / yarn / pnpm (your preferred package manager)  
+- If using TypeScript, ensure your environment is set up for it.
+- Python <= 3.12
+- OpenAI (or alternate LLM with API access)
+
+### Installation
 
 ```bash
-npm run dev
+# clone
+git clone https://github.com/emsikes/business-idea-generator.git
+cd business-idea-generator
+
+# install dependencies
+npm install
 # or
-yarn dev
+yarn
 # or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Running Locally
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+# start the dev server
+npm run dev
+# or yarn dev
+# or pnpm dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Visit `http://localhost:3000` in your browser to see the app.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🧰 Features
 
-To learn more about Next.js, take a look at the following resources:
+- Fetches business ideas from a backend API  
+- Simple, clean UI  
+- Light and dark mode support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠 Built With
 
-## Deploy on Vercel
+- [Next.js](https://nextjs.org/) (React framework)  
+- TypeScript  
+- Tailwind CSS (or your CSS framework)  
+- Python
+- FastAPI
+- OpenAI (can easily swap out to another LLM)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+## 📦 Available Scripts
+
+| Script         | Description                        |
+|----------------|-------------------------------------|
+| `dev`          | Runs the app in development mode    |
+| `build`        | Builds the app for production       |
+| `start`        | Runs the production build locally   |
+| `lint`         | Runs ESLint or style checks         |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to improve something or fix a bug:
+
+1. Fork the project  
+2. Create your feature branch (`git checkout -b feature/your-feature`)  
+3. Commit your changes  
+4. Push to your branch  
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is [MIT licensed](LICENSE) (or whatever you prefer).
+
+---
+
+## 🗣 Contact
+
+Feel free to reach out to me via GitHub or email if you have suggestions, questions, or ideas.
+
+---
