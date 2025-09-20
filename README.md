@@ -1,112 +1,127 @@
-# saas-medi-transcriptor
+# 🩺 SaaS Medi Transcriptor
 
-A lightweight cloud‑based medical transcription application. Transcribe physician dictation into structured text, with features designed for ease, speed, and privacy.
+[![License:
+MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
+![Platform](https://img.shields.io/badge/Platform-React%20%7C%20Next.js%20%7C%20FastAPI%20%7C%20Python-blue)
 
----
+## 📖 Overview
 
-## Purpose
+**SaaS Medi Transcriptor** is a demo app of a potential modern SaaS application for **medical
+transcription**.\
+It empowers healthcare professionals to transcribe conversations into
+structured, accurate, and secure text.\
+The platform combines a **React + Next.js** frontend with a **FastAPI
+(Python)** backend for performance, scalability, and developer-friendly
+workflows.
 
-This app provides a streamlined solution for converting medical dictation into usable, structured transcriptions. Designed for clinics, hospitals, and telehealth providers who need accurate transcription without heavy overhead. Key goals:
+------------------------------------------------------------------------
 
-- Fast transcription turnaround times  
-- Minimal setup and maintenance  
-- Secure handling of sensitive medical data  
-- Clean, readable output formats for easy integration into electronic health record (EHR) systems  
+## ✨ Features
 
----
+-   🎙️ **Real-time Voice-to-Text** -- Accurate transcription of medical
+    consultations.\
+-   🧾 **Structured Clinical Output** -- Generates clean, formatted
+    transcripts.\
+-   **Visit Summary Email to Patient** -- Accurate transcription of medical
+    consultations emailed to patient.\
+-   🔐 **Secure by Design** -- HIPAA-friendly architecture and
+    compliance-ready. (demo only and not configured fully HIIPA compliant)\
+-   ☁️ **SaaS Multi-Tenancy** -- Scalable backend for multiple
+    organizations.\
+-   📊 **Export & Sharing** -- Save transcripts in PDF, text, or
+    EHR-ready formats.
 
-## Features
+------------------------------------------------------------------------
 
-- Upload audio recordings (wav, mp3, etc.) or record directly in‑browser  
-- Automated speech‑to‑text transcription  
-- Medical vocabulary and terminology support  
-- Basic speaker separation (e.g. “Doctor,” “Patient”)  
-- Export transcripts in multiple formats (txt, docx, JSON)  
-- Review & edit interface for corrections  
-- Optional: time‑stamps, sections (e.g. “History,” “Diagnosis,” “Plan”)  
+## 🚀 Tech Stack
 
----
+### Frontend
 
-## Requirements
+-   ⚛️ **React** -- UI component architecture.\
+-   ▲ **Next.js** -- SSR, routing, and API integration.\
+-   🎨 **TailwindCSS** *(optional)* -- Modern styling.
 
-- Node.js (v16+)  
-- Python (<= 3.12)  
-- API credentials for speech‑to‑text service (e.g. OpenAI, Google Cloud, AWS, or other)  
-- Secure storage or database for audio + transcript storage  
-- TLS/SSL setup if deploying over HTTPS  
+### Backend
 
----
+-   ⚡ **FastAPI (Python)** -- High-performance API framework.\
+-   🐍 **Python 3.9+** -- Backend logic and integrations.\
+-   🗄️ **Database** -- (e.g., PostgreSQL, MySQL, or SQLite depending on
+    setup).
 
-## Installation
+------------------------------------------------------------------------
 
-```bash
-# Clone the repository
-git clone https://github.com/emsikes/saas-medi-transcriptor.git
-cd saas-medi-transcriptor
+## 🛠️ Installation
 
-# Install frontend & backend dependencies
-npm install
-# or yarn / pnpm
+### 1. Clone the repository
 
-# Python backend dependencies
-pip install -r requirements.txt
-```
+\`\`\`bash git clone
+https://github.com/emsikes/saas-medi-transcriptor.git cd
+saas-medi-transcriptor \`\`\`
 
----
+### 2. Setup Backend (FastAPI)
 
-## Running Locally
+\`\`\`bash cd backend python -m venv venv source venv/bin/activate \# On
+Windows: venv`\Scripts`{=tex}`\activate`{=tex} pip install -r
+requirements.txt
 
-```bash
-# Start the backend API server
-cd api
-python main.py   # or equivalent entry point
+# Run backend server
 
-# Start the frontend
-cd pages  # or wherever the UI resides
-npm run dev      # or yarn dev / pnpm dev
-```
+uvicorn main:app --reload \`\`\`
 
-Then navigate to `http://localhost:3000` (or whatever port is configured) to use the app.
+### 3. Setup Frontend (React + Next.js)
 
----
+\`\`\`bash cd frontend npm install
 
-## Deployment
+# Run development server
 
-- Build the frontend (`npm run build` or equivalent)  
-- Ensure backend is set up in a secure server or cloud environment  
-- Use environment variables for secret keys (API, database, storage)  
-- Securely store audio files and transcripts  
-- Enable HTTPS  
+npm run dev \`\`\`
 
----
+The backend runs by default on **http://localhost:8000**\
+The frontend runs on **http://localhost:3000**
 
-## Built With
+------------------------------------------------------------------------
 
-- Next.js (React) — frontend UI  
-- TypeScript — type safety in frontend & backend  
-- Python (FastAPI or similar) — backend speech transcription & business logic  
-- Tailwind CSS (or another CSS framework) — clean, responsive UI  
-- Speech‑to‑text API (OpenAI, Google, AWS, etc.)  
+## 📂 Project Structure
 
----
+\`\`\` saas-medi-transcriptor/ │── backend/ \# FastAPI backend (Python)
+│ ├── main.py \# API entry point │ ├── models/ \# Database models │ ├──
+routers/ \# API routes │ └── utils/ \# Helpers & services │ │──
+frontend/ \# React + Next.js frontend │ ├── pages/ \# Next.js pages │
+├── components/ \# Reusable UI components │ └── styles/ \# Global styles
+│ │── public/ \# Static assets │── package.json \# Frontend dependencies
+│── requirements.txt# Backend dependencies \`\`\`
 
-## Contributing
+------------------------------------------------------------------------
 
-Contributions welcome! Suggestions, bug fixes, and feature enhancements are all appreciated. A typical workflow:
+## 🤝 Contributing
 
-1. Fork the repository  
-2. Create a feature branch (e.g. `feature/speaker‑labels` or `fix/security`)  
-3. Commit your changes  
-4. Open a Pull Request  
+Contributions are welcome!\
+Please fork the repo and submit a pull request.
 
----
+1.  🍴 Fork the project\
+2.  🌱 Create your feature branch
+    (`git checkout -b feature/YourFeature`)\
+3.  💡 Commit your changes (`git commit -m 'Add new feature'`)\
+4.  🚀 Push to the branch (`git push origin feature/YourFeature`)\
+5.  🔁 Open a Pull Request
 
-## License
+------------------------------------------------------------------------
 
-MIT License — see [LICENSE](LICENSE) file for details.
+## 📜 License
 
----
+This project is licensed under the [MIT License](LICENSE).
 
-## Contact
+------------------------------------------------------------------------
 
-Questions? Ideas? Reach out on GitHub (issue tracker) or via email.
+## 📧 Contact
+
+For questions or collaboration opportunities:\
+**Author:** Matt Sikes\
+**GitHub:** [emsikes](https://github.com/emsikes)
+
+------------------------------------------------------------------------
+
+> 🩺 *Building AI-powered healthcare tools that make medical workflows
+> faster, safer, and smarter.*
