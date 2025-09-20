@@ -1,100 +1,112 @@
-# Business Idea Generator
+# saas-medi-transcriptor
 
-A small web app that generates business ideas on demand.
+A lightweight cloud‑based medical transcription application. Transcribe physician dictation into structured text, with features designed for ease, speed, and privacy.
 
 ---
 
-## 🚀 Getting Started
+## Purpose
 
-These steps will help you get a local copy up and running.
+This app provides a streamlined solution for converting medical dictation into usable, structured transcriptions. Designed for clinics, hospitals, and telehealth providers who need accurate transcription without heavy overhead. Key goals:
 
-### Prerequisites
+- Fast transcription turnaround times  
+- Minimal setup and maintenance  
+- Secure handling of sensitive medical data  
+- Clean, readable output formats for easy integration into electronic health record (EHR) systems  
 
-- Node.js (16+ recommended)  
-- npm / yarn / pnpm (your preferred package manager)  
-- If using TypeScript, ensure your environment is set up for it.
-- Python <= 3.12
-- OpenAI (or alternate LLM with API access)
+---
 
-### Installation
+## Features
+
+- Upload audio recordings (wav, mp3, etc.) or record directly in‑browser  
+- Automated speech‑to‑text transcription  
+- Medical vocabulary and terminology support  
+- Basic speaker separation (e.g. “Doctor,” “Patient”)  
+- Export transcripts in multiple formats (txt, docx, JSON)  
+- Review & edit interface for corrections  
+- Optional: time‑stamps, sections (e.g. “History,” “Diagnosis,” “Plan”)  
+
+---
+
+## Requirements
+
+- Node.js (v16+)  
+- Python (<= 3.12)  
+- API credentials for speech‑to‑text service (e.g. OpenAI, Google Cloud, AWS, or other)  
+- Secure storage or database for audio + transcript storage  
+- TLS/SSL setup if deploying over HTTPS  
+
+---
+
+## Installation
 
 ```bash
-# clone
-git clone https://github.com/emsikes/business-idea-generator.git
-cd business-idea-generator
+# Clone the repository
+git clone https://github.com/emsikes/saas-medi-transcriptor.git
+cd saas-medi-transcriptor
 
-# install dependencies
+# Install frontend & backend dependencies
 npm install
-# or
-yarn
-# or
-pnpm install
+# or yarn / pnpm
+
+# Python backend dependencies
+pip install -r requirements.txt
 ```
 
+---
 
-### Running Locally
+## Running Locally
 
 ```bash
-# start the dev server
-npm run dev
-# or yarn dev
-# or pnpm dev
+# Start the backend API server
+cd api
+python main.py   # or equivalent entry point
+
+# Start the frontend
+cd pages  # or wherever the UI resides
+npm run dev      # or yarn dev / pnpm dev
 ```
 
-Visit `http://localhost:3000` in your browser to see the app.
+Then navigate to `http://localhost:3000` (or whatever port is configured) to use the app.
 
 ---
 
-## 🧰 Features
+## Deployment
 
-- Fetches business ideas from a backend API  
-- Simple, clean UI  
-- Light and dark mode support
-
----
-
-## 🛠 Built With
-
-- [Next.js](https://nextjs.org/) (React framework)  
-- TypeScript  
-- Tailwind CSS (or your CSS framework)  
-- Python
-- FastAPI
-- OpenAI (can easily swap out to another LLM)
+- Build the frontend (`npm run build` or equivalent)  
+- Ensure backend is set up in a secure server or cloud environment  
+- Use environment variables for secret keys (API, database, storage)  
+- Securely store audio files and transcripts  
+- Enable HTTPS  
 
 ---
 
-## 📦 Available Scripts
+## Built With
 
-| Script         | Description                        |
-|----------------|-------------------------------------|
-| `dev`          | Runs the app in development mode    |
-| `build`        | Builds the app for production       |
-| `start`        | Runs the production build locally   |
-| `lint`         | Runs ESLint or style checks         |
+- Next.js (React) — frontend UI  
+- TypeScript — type safety in frontend & backend  
+- Python (FastAPI or similar) — backend speech transcription & business logic  
+- Tailwind CSS (or another CSS framework) — clean, responsive UI  
+- Speech‑to‑text API (OpenAI, Google, AWS, etc.)  
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! If you'd like to improve something or fix a bug:
+Contributions welcome! Suggestions, bug fixes, and feature enhancements are all appreciated. A typical workflow:
 
-1. Fork the project  
-2. Create your feature branch (`git checkout -b feature/your-feature`)  
+1. Fork the repository  
+2. Create a feature branch (e.g. `feature/speaker‑labels` or `fix/security`)  
 3. Commit your changes  
-4. Push to your branch  
-5. Open a Pull Request
+4. Open a Pull Request  
 
 ---
 
-## 📄 License
+## License
 
-This project is [MIT licensed](LICENSE) (or whatever you prefer).
-
----
-
-## 🗣 Contact
-
-Feel free to reach out to me via GitHub or email if you have suggestions, questions, or ideas.
+MIT License — see [LICENSE](LICENSE) file for details.
 
 ---
+
+## Contact
+
+Questions? Ideas? Reach out on GitHub (issue tracker) or via email.
