@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactStrictMode: true,
+  output: 'export', // Export static HTML and JavaScript files
+  images: {
+    unoptimized: true // Required for static export
+  }
 };
 
 export default nextConfig;

@@ -1,10 +1,14 @@
-# 🩺 SaaS Medi Transcriptor
+# 🩺 Demo SaaS Medi Transcriptor
 
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
 ![Platform](https://img.shields.io/badge/Platform-React%20%7C%20Next.js%20%7C%20FastAPI%20%7C%20Python-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?logo=fastapi&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 
 ## 📖 Overview
 
@@ -20,7 +24,7 @@ workflows.
 
 ## ✨ Features
 
--   🎙️ **Real-time Voice-to-Text** -- Accurate transcription of medical
+-   🎙️ **Full Text Summarization** -- Accurate transcription of medical
     consultations.\
 -   🧾 **Structured Clinical Output** -- Generates clean, formatted
     transcripts.\
@@ -84,15 +88,20 @@ The frontend runs on **http://localhost:3000**
 ------------------------------------------------------------------------
 
 ## 📂 Project Structure
-
-\`\`\` saas-medi-transcriptor/ │── backend/ \# FastAPI backend (Python)
-│ ├── main.py \# API entry point │ ├── models/ \# Database models │ ├──
-routers/ \# API routes │ └── utils/ \# Helpers & services │ │──
-frontend/ \# React + Next.js frontend │ ├── pages/ \# Next.js pages │
-├── components/ \# Reusable UI components │ └── styles/ \# Global styles
-│ │── public/ \# Static assets │── package.json \# Frontend dependencies
-│── requirements.txt# Backend dependencies \`\`\`
-
+```
+saas/
+├── pages/                  # Next.js Pages Router
+├── styles/                 # CSS styles
+├── api/                    # FastAPI backend
+├── public/                 # Static assets
+├── node_modules/          
+├── .env.local             # Your secrets (never commit!)
+├── .gitignore
+├── package.json
+├── requirements.txt
+├── next.config.ts
+└── tsconfig.json
+```
 ------------------------------------------------------------------------
 
 ## 🤝 Contributing
